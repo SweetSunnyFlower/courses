@@ -1115,6 +1115,10 @@ export default defineConfig({
   description: '我买过的教程',
   ignoreDeadLinks: true,
   markdown: {
+     image: {
+      // 默认禁用；设置为 true 可为所有图片启用懒加载。
+      lazyLoading: true
+    },
     config(md: any) {
       const escapeVueInterpolation = (html: string) => html.replace(/{{/g, '&#123;&#123;').replace(/}}/g, '&#125;&#125;')
       const defaultText = md.renderer.rules.text || ((tokens: any, idx: number) => tokens[idx].content)
