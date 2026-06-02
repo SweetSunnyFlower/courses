@@ -1,3 +1,8 @@
 node_modules/
 
-.vitepress/
+.vitepress/*
+!.vitepress/config.mts
+!.vitepress/theme/
+!.vitepress/theme/**
+.vitepress/dist/
+.vitepress/cache/
