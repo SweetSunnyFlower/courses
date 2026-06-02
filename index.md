@@ -24,6 +24,6 @@ features:
     details: 3 门课程
     link: /courses/php/
   - title: 掘金小册
-    details: 2 门课程
+    details: 3 门课程
     link: /courses/juejin/
 ---
