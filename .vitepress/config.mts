@@ -1111,6 +1111,7 @@ const courseSidebars = {
 
 export default defineConfig({
   title: '学习资料',
+  base: '/courses/',
   description: '我买过的教程',
   ignoreDeadLinks: true,
   markdown: {
