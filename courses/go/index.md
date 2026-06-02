@@ -17,4 +17,7 @@ features:
   - title: G02 Go API 实战
     details: Go API 项目实战教程
     link: /courses/go/go-api-1.19/
+  - title: 分布式IM原理与实战
+    details: 从 0 到 1 打造即时通讯云
+    link: /courses/go/im-go/
 ---

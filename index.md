@@ -6,12 +6,15 @@ hero:
   text: "我买过的教程"
   tagline: 按技术栈分类的本地教程归档
   actions:
-    - theme: brand
-      text: Go 教程
-      link: /courses/go/
-    - theme: alt
-      text: PHP 教程
-      link: /courses/php/
+  - theme: brand
+    text: Go 教程
+    link: /courses/go/
+  - theme: alt
+    text: PHP 教程
+    link: /courses/php/
+  - theme: alt
+    text: 掘金小册
+    link: /courses/juejin/
 
 features:
   - title: Go
@@ -20,4 +23,7 @@ features:
   - title: PHP / Laravel
     details: 3 门课程
     link: /courses/php/
+  - title: 掘金小册
+    details: 2 门课程
+    link: /courses/juejin/
 ---
