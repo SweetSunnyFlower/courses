@@ -10,7 +10,7 @@ const route = useRoute()
 function initZoom() {
   mediumZoom('.VPDoc .content img:not(.no-zoom)', {
     background: 'var(--vp-c-bg)',
-    margin: 24,
+    margin: window.matchMedia('(max-width: 768px)').matches ? 8 : 24,
   })
 }
 
@@ -32,8 +32,28 @@ watch(
 </template>
 
 <style>
+.VPDoc .content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 .medium-zoom-overlay,
 .medium-zoom-image--opened {
   z-index: 9999;
+}
+
+.medium-zoom-image--opened {
+  max-width: calc(100vw - 16px) !important;
+  max-height: calc(100vh - 16px) !important;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .VPDoc .content img {
+    width: auto;
+    max-width: 100%;
+  }
 }
 </style>
