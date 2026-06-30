@@ -6,3 +6,5 @@ node_modules/
 !.vitepress/theme/**
 .vitepress/dist/
 .vitepress/cache/
+
+.claude
