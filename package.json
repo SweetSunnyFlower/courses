@@ -20,6 +20,9 @@
     "vitepress-plugin-mermaid": "^2.0.17"
   },
   "dependencies": {
+    "@wekanteam/markdown-it-mermaid": "^0.6.4",
+    "install": "^0.13.0",
+    "markdown-it-mermaid": "^0.2.5",
     "vitepress-mermaid-renderer": "^1.1.27"
   }
 }

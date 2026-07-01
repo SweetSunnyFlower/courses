@@ -1230,10 +1230,12 @@ export default withMermaid({
   mermaid: {
     //mermaidConfig !theme here works for light mode since dark theme is forced in dark mode
   },
+  lang: 'zh-CN',
   title: '学习资料',
   base: '/courses/',
-  description: '我买过的教程',
+  description: '我的学习资料',
   ignoreDeadLinks: true,
+  // cleanUrls:true,
   markdown: {
     image: {
       // 默认禁用；设置为 true 可为所有图片启用懒加载。
@@ -1268,8 +1270,9 @@ export default withMermaid({
 // export default defineConfig({
 //   title: '学习资料',
 //   base: '/courses/',
-//   description: '我买过的教程',
+//   description: '我的学习资料',
 //   ignoreDeadLinks: true,
+//   lang: 'zh-CN',
 //   markdown: {
 //      image: {
 //       // 默认禁用；设置为 true 可为所有图片启用懒加载。
