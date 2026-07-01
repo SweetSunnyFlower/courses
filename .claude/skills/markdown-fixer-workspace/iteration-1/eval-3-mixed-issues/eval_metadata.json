@@ -1,0 +1,6 @@
+{
+  "eval_id": 3,
+  "eval_name": "mixed-issues",
+  "prompt": "My markdown files have a bunch of issues — broken blockquotes, tables that don't render as tables, some numbered lists that look weird, and the YAML code blocks are all flattened. Can you clean up everything in /Users/gao/.claude/skills/markdown-fixer-workspace/iteration-1/eval-3-mixed-issues/with_skill/outputs/?",
+  "assertions": []
+}

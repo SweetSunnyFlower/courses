@@ -1,0 +1,23 @@
+{
+  "skill_name": "markdown-fixer",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I have a folder of markdown files from a course I'm writing. The blockquotes and tables seem to render wrong when I preview them. Can you check and fix the markdown syntax in /tmp/test-md-basic/?",
+      "expected_output": "All .md files in the directory should have: blockquotes with content on the same line as >, tables with proper separator rows and closing pipes, numbered lists with content on the same line as the number.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "The code blocks in my markdown documentation lost all their indentation — everything is flush left. Can you fix the code block formatting in /tmp/test-md-code/?",
+      "expected_output": "TSX/JSX/TS/JSON code blocks should have proper indentation restored via prettier. JSON blocks without language tags should be detected and formatted. Code that prettier can't parse should be left unchanged.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "My markdown files have a bunch of issues — broken blockquotes, tables that don't render as tables, some numbered lists that look weird, and the YAML code blocks are all flattened. Can you clean up everything in /tmp/test-md-mixed/?",
+      "expected_output": "All syntax issues fixed: blockquotes, tables, numbered lists, and YAML indentation. Code blocks in TSX/JSON formatted with prettier. Verification shows no remaining issues.",
+      "files": []
+    }
+  ]
+}

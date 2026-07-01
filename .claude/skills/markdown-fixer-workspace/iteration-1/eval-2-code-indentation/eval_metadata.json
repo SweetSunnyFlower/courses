@@ -1,0 +1,6 @@
+{
+  "eval_id": 2,
+  "eval_name": "code-indentation",
+  "prompt": "The code blocks in my markdown documentation lost all their indentation — everything is flush left. Can you fix the code block formatting in /Users/gao/.claude/skills/markdown-fixer-workspace/iteration-1/eval-2-code-indentation/with_skill/outputs/?",
+  "assertions": []
+}

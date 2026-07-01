@@ -1,0 +1,6 @@
+{
+  "eval_id": 1,
+  "eval_name": "blockquotes-tables",
+  "prompt": "I have a folder of markdown files from a course I'm writing. The blockquotes and tables seem to render wrong when I preview them. Can you check and fix the markdown syntax in /Users/gao/.claude/skills/markdown-fixer-workspace/iteration-1/eval-1-blockquotes-tables/with_skill/outputs/?",
+  "assertions": []
+}
