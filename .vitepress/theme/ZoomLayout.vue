@@ -20,23 +20,23 @@ const articleAudioName = computed(() => {
 
   return `${articleName}.mp3`
 })
-const audioSource = computed(() => {
-  if (!articleAudioName.value) return ''
+// const audioSource = computed(() => {
+//   if (!articleAudioName.value) return ''
 
-  const routePath = decodeURIComponent(route.path).replace(/\.html$/, '').replace(/\/$/, '')
-  const segments = routePath.split('/').filter(Boolean)
-  if (segments[0] === 'courses') segments.shift()
+//   const routePath = decodeURIComponent(route.path).replace(/\.html$/, '').replace(/\/$/, '')
+//   const segments = routePath.split('/').filter(Boolean)
+//   if (segments[0] === 'courses') segments.shift()
 
-  const coursePath = `/${segments.slice(0, -1).join('/')}`
+//   const coursePath = `/${segments.slice(0, -1).join('/')}`
 
-  const hasMp3 = [
-    '/courses/database/mysql-45'
-  ]
+//   const hasMp3 = [
+//     '/courses/database/mysql-45'
+//   ]
 
-  if (hasMp3.includes(coursePath)) return withBase(`${coursePath}/mp3/${articleAudioName.value}`)
+//   if (hasMp3.includes(coursePath)) return withBase(`${coursePath}/mp3/${articleAudioName.value}`)
 
-  return ""
-})
+//   return ""
+// })
 
 function initZoom() {
   mediumZoom('.VPDoc .content img:not(.no-zoom)', {
@@ -95,7 +95,7 @@ watch(
 
 <template>
   <Layout />
-  <div v-if="audioSource" class="article-audio-player">
+  <!-- <div class="article-audio-player">
     <div class="article-audio-main">
       <button type="button" class="article-audio-toggle" @click="toggleAudio">
         {{ isAudioPlaying ? '暂停' : '播放' }}
@@ -110,7 +110,7 @@ watch(
     </div>
     <audio ref="audioRef" class="article-audio-native" :src="audioSource" controls preload="metadata"
       @play="isAudioPlaying = true" @pause="isAudioPlaying = false" @ended="isAudioPlaying = false" />
-  </div>
+  </div> -->
 </template>
 
 <style>
