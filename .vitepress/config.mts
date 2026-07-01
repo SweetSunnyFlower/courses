@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { withMermaid } from "vitepress-plugin-mermaid";
 
 const goNav = [
   { text: 'G01 Go 实战：Web 入门', link: '/courses/go/go-basic-1.22/' },
@@ -28,10 +29,10 @@ const databaseNav = [
 ]
 
 const courseSidebars = {
-  '/courses/build-tools/': [
-    { text: '构建工具', link: '/courses/build-tools/' },
-    { text: 'B01 Vite', link: '/courses/build-tools/vite/' },
-  ],
+  // '/courses/build-tools/': [
+  //   { text: '构建工具', link: '/courses/build-tools/' },
+  //   { text: 'B01 Vite', link: '/courses/build-tools/vite/' },
+  // ],
   '/courses/build-tools/vite/': [
     { text: 'B01 Vite', link: '/courses/build-tools/vite/' },
     {
@@ -1223,13 +1224,18 @@ const courseSidebars = {
   ],
 }
 
-export default defineConfig({
+// .vitepress/config.js
+export default withMermaid({
+  // your existing vitepress config...
+  mermaid: {
+    //mermaidConfig !theme here works for light mode since dark theme is forced in dark mode
+  },
   title: '学习资料',
   base: '/courses/',
   description: '我买过的教程',
   ignoreDeadLinks: true,
   markdown: {
-     image: {
+    image: {
       // 默认禁用；设置为 true 可为所有图片启用懒加载。
       lazyLoading: true
     },
@@ -1252,9 +1258,45 @@ export default defineConfig({
       { text: 'Go', items: goNav },
       { text: 'PHP', items: phpNav },
       { text: '掘金小册', items: juejinNav },
-      { text: '构建工具', items: buildToolsNav },
+      // { text: '构建工具', items: buildToolsNav },
       { text: '数据库', items: databaseNav },
     ],
     sidebar: courseSidebars,
   },
-})
+});
+
+// export default defineConfig({
+//   title: '学习资料',
+//   base: '/courses/',
+//   description: '我买过的教程',
+//   ignoreDeadLinks: true,
+//   markdown: {
+//      image: {
+//       // 默认禁用；设置为 true 可为所有图片启用懒加载。
+//       lazyLoading: true
+//     },
+//     config(md: any) {
+//       const escapeVueInterpolation = (html: string) => html.replace(/{{/g, '&#123;&#123;').replace(/}}/g, '&#125;&#125;')
+//       const defaultText = md.renderer.rules.text || ((tokens: any, idx: number) => tokens[idx].content)
+//       const defaultCodeInline = md.renderer.rules.code_inline || ((tokens: any, idx: number) => `<code>${md.utils.escapeHtml(tokens[idx].content)}</code>`)
+//       const defaultFence = md.renderer.rules.fence || ((tokens: any, idx: number) => `<pre><code>${md.utils.escapeHtml(tokens[idx].content)}</code></pre>`)
+//       const defaultCodeBlock = md.renderer.rules.code_block || ((tokens: any, idx: number) => `<pre><code>${md.utils.escapeHtml(tokens[idx].content)}</code></pre>`)
+
+//       md.renderer.rules.text = (tokens: any, idx: number, options: any, env: any, self: any) => escapeVueInterpolation(defaultText(tokens, idx, options, env, self))
+//       md.renderer.rules.code_inline = (tokens: any, idx: number, options: any, env: any, self: any) => escapeVueInterpolation(defaultCodeInline(tokens, idx, options, env, self))
+//       md.renderer.rules.fence = (tokens: any, idx: number, options: any, env: any, self: any) => escapeVueInterpolation(defaultFence(tokens, idx, options, env, self))
+//       md.renderer.rules.code_block = (tokens: any, idx: number, options: any, env: any, self: any) => escapeVueInterpolation(defaultCodeBlock(tokens, idx, options, env, self))
+//     },
+//   },
+//   themeConfig: {
+//     nav: [
+//       { text: '首页', link: '/' },
+//       { text: 'Go', items: goNav },
+//       { text: 'PHP', items: phpNav },
+//       { text: '掘金小册', items: juejinNav },
+//       { text: '构建工具', items: buildToolsNav },
+//       { text: '数据库', items: databaseNav },
+//     ],
+//     sidebar: courseSidebars,
+//   },
+// })

@@ -16,9 +16,6 @@ hero:
     text: 掘金小册
     link: /courses/juejin/
   - theme: alt
-    text: 构建工具
-    link: /courses/build-tools/
-  - theme: alt
     text: 数据库
     link: /courses/database/
 
@@ -32,9 +29,6 @@ features:
   - title: 掘金小册
     details: 5 门课程
     link: /courses/juejin/
-  - title: 构建工具
-    details: 1 门课程
-    link: /courses/build-tools/
   - title: 数据库
     details: 1 门课程
     link: /courses/database/

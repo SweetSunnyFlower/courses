@@ -3,6 +3,8 @@ import DefaultTheme from 'vitepress/theme'
 import mediumZoom from 'medium-zoom'
 import { computed, nextTick, onMounted, ref, watch } from 'vue'
 import { withBase, useRoute } from 'vitepress'
+import { useData } from "vitepress";
+import { createMermaidRenderer } from "vitepress-mermaid-renderer";
 
 const { Layout } = DefaultTheme
 const route = useRoute()
@@ -64,6 +66,17 @@ function stopAudio() {
   isAudioPlaying.value = false
 }
 
+// const { isDark } = useData();
+
+// const initMermaid = () => {
+//   const mermaidRenderer = createMermaidRenderer({
+//     theme: isDark.value ? "dark" : "forest",
+//   });
+// };
+
+// // initial mermaid setup
+// nextTick(() => initMermaid());
+
 onMounted(async () => {
   await nextTick()
   initZoom()
@@ -72,6 +85,7 @@ onMounted(async () => {
 watch(
   () => route.path,
   async () => {
+    // initMermaid();
     stopAudio()
     await nextTick()
     initZoom()
@@ -94,16 +108,8 @@ watch(
         停止
       </button>
     </div>
-    <audio
-      ref="audioRef"
-      class="article-audio-native"
-      :src="audioSource"
-      controls
-      preload="metadata"
-      @play="isAudioPlaying = true"
-      @pause="isAudioPlaying = false"
-      @ended="isAudioPlaying = false"
-    />
+    <audio ref="audioRef" class="article-audio-native" :src="audioSource" controls preload="metadata"
+      @play="isAudioPlaying = true" @pause="isAudioPlaying = false" @ended="isAudioPlaying = false" />
   </div>
 </template>
 

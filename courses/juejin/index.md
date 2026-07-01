@@ -21,6 +21,9 @@ hero:
     - theme: alt
       text: 大模型应用一站式开发
       link: /courses/juejin/llm-app-development/
+    - theme: alt
+      text: AI Agents 开发实践
+      link: /courses/juejin/ai-agents-practice/
 
 features:
   - title: 分布式IM原理与实战
@@ -38,4 +41,7 @@ features:
   - title: 大模型应用一站式开发
     details: 大模型应用开发全景实战课
     link: /courses/juejin/llm-app-development/
+  - title: AI Agents 开发实践
+    details: 基于大模型的 AI 助手开发
+    link: /courses/juejin/ai-agents-practice/
 ---
